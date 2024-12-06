@@ -1,4 +1,5 @@
 /* just imports from the folder styles */
+@import url("reset.css");
 @import url("styles/navigation.css");
 @import url("styles/hero.css");
-@import url(styles/contact.css);
+@import url("styles/contact.css");

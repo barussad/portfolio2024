@@ -9,7 +9,7 @@
     grid-column: 1 / span 2 ;
 }
 
-.textarea {
+textarea {
     width: 100%;
     resize: none;
     min-height: 10rem;
