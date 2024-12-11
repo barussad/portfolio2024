@@ -1,0 +1,36 @@
+
+body {
+  height: 100%;
+  margin: 0;
+  background-image: url("../images/pattern.svg");
+  background-repeat: repeat-y;
+}
+
+.hero-image {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text {
+  font-family: 'cheap_potatoes_blackregular';
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.big {
+  font-size: 8rem;
+  line-height: 159%;
+  margin-top: 0%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0%;
+}

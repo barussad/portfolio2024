@@ -1,11 +1,13 @@
 nav {
     width: 80vw;
     margin: 0 auto;
-    padding-top: 5vh;
+    padding-top: 2vh;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-family: 'Manrope';
+    font-weight: 600;
 }
 
 nav ul {
@@ -16,6 +18,10 @@ nav ul {
     width: 50vw;
 }
 
+.logo {
+    color: #00000000;
+}
+
 .nav-links {
     list-style-type: none;
 }
@@ -23,12 +29,11 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: black;
-    text-transform: uppercase;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-    color:coral;
+    color: #42679F;
 }
 
 .menu-icon {

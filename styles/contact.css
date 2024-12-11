@@ -1,12 +1,45 @@
+h2 {
+    font-family:'cheap_potatoes_blackregular';
+    font-size: 36px;
+    color:#42679F;
+}
+
+.contact-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.contact-container h1 {
+    font-size: 36px;
+    color: #42679F;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    font-family: 'cheap_potatoes_blackregular';
+    font-size: 16px;
+    color:#42679F;
+}
+
 .contact_form {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* fraction - 2 columns */
+    display: block;
     max-width: 30rem;
     gap: 1rem;
 }
 
-.contact_form-message {
-    grid-column: 1 / span 2 ;
+.contact_input-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    font-family: 'Manrope';
+    font-size: 1rem;
 }
 
 textarea {
@@ -18,9 +51,10 @@ textarea {
 .contact_input-group {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1rem;
     gap: .25rem;
 }
 
 .contact_input-group input {
-    padding: .35rem;
+    padding: .8rem;
 }
