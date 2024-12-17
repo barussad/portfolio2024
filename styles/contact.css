@@ -28,13 +28,13 @@ form label {
     color:#42679F;
 }
 
-.contact_form {
+.contact-form {
     display: block;
     max-width: 30rem;
     gap: 1rem;
 }
 
-.contact_input-group {
+.contact-input-group {
     margin-bottom: 20px;
 }
 
@@ -61,23 +61,23 @@ textarea {
     min-height: 10rem;
 }
 
-.contact_input-group {
+.contact-input-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
     gap: .5rem;
 }
 
-.contact_input-group input, textarea{
+.contact-input-group input, textarea{
     padding: .8rem;
 }
 
-form button {
+.button {
     background: #42679F;
     color: white;
     padding: 10px 20px;
     border: 2px solid #42679F;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-top: 1rem;
     font-size: 16px;
     cursor: pointer;
@@ -87,6 +87,6 @@ form button {
 form button:hover {
     background: white;
     border: 2px solid #42679F;
-    border-radius: 5px;
+    border-radius: 8px;
     color: #42679F;
 }
