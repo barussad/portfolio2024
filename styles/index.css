@@ -8,7 +8,7 @@
     flex-wrap: wrap;
 }
 
-#about-me {
+.about-me {
     background-color: white;
     display: flex;
     align-items: center;
