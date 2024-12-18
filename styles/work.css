@@ -1,5 +1,29 @@
-#model {
+.center {
     display: flex;
     justify-content: center;
     text-align: center;
+    padding-top: 10rem;
+    margin: auto;
+}
+
+.business-mockup {
+    padding-top: 5rem;
+}
+
+.typeface {
+    padding: 0 0 2rem 0;
+}
+
+.work-text {
+    margin-bottom: 3rem;
+}
+
+.description {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-family: 'cheap_potatoes_blackregular';
+    text-transform: uppercase;
+    color: #42679F;
 }

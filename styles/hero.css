@@ -7,6 +7,16 @@ body {
   background-repeat: repeat-y;
 }
 
+.longer {
+  background-image: url("../images/pattern2.svg");
+  background-repeat: repeat-y;
+}
+
+p {
+  font-family: 'Manrope';
+  font-weight: 600;
+}
+
 .hero-image {
   height: 100vh;
   background-position: center;
