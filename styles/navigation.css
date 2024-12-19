@@ -1,6 +1,6 @@
 nav {
     width: 80vw;
-    margin: 0 auto;
+    margin: 3vh auto 0 auto;
     padding-top: 2vh;
 
     display: flex;
@@ -8,6 +8,7 @@ nav {
     justify-content: space-between;
     font-family: 'Manrope';
     font-weight: 600;
+    align-items: center;
 }
 
 nav ul {
@@ -18,8 +19,14 @@ nav ul {
     width: 50vw;
 }
 
+a {
+    color: black;
+}
+
 .logo {
-    color: #00000000;
+    color: #42679F;
+    font-family: 'cheap_potatoes_blackregular';
+    font-size: .75rem;
 }
 
 .nav-links {
