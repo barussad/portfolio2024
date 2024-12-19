@@ -1,0 +1,31 @@
+.grid {
+    max-width: 1077px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+}
+
+.grid img {
+    width: 100%;
+}
+
+.grid-4 {
+    grid-column: span 4;
+}
+
+.grid-5 {
+    grid-column: span 5;  
+}
+
+.grid-6 {
+    grid-column: span 6;   
+}
+
+.grid-7 {
+    grid-column: span 7; 
+}
+
+.grid-12 {
+    grid-column: span 12;
+}
