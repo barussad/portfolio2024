@@ -27,7 +27,7 @@
 .about-me-text {
     flex: 1;
     max-width: 35vw;
-    margin-right: 8rem;
+    margin-right: 5rem;
 }
 
 .about-me-text p {
@@ -75,7 +75,7 @@
 .work-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-gap: 10px;
 }
 
 .mobile-description {
@@ -83,16 +83,35 @@
 }
 
 .work-item {
-    max-width: 349px;
-    overflow: hidden;
-    background-color: #fff;
+    position: relative;
+    width: 349px;
 }
 
-.work-item img {
+.scribble {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+
 }
+
+.main-image {
+    z-index: 1;
+}
+
+.scribble {
+    z-index: 2;
+    opacity: 0;
+    rotate: -5deg;
+}
+
+.work-item:hover .scribble {
+    opacity: 1;
+}
+
 
 .white {
     background-color: white;
