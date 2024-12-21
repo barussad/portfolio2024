@@ -15,3 +15,12 @@ menuIcon.addEventListener("click", () => {
     }
 })
 
+const progressBar = document.getElementById('progress-bar');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+    progressBar.style.width = `${scrollPercentage}%`;
+})
