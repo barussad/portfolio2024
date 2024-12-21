@@ -15,6 +15,7 @@ menuIcon.addEventListener("click", () => {
     }
 })
 
+/* progress bar */
 const progressBar = document.getElementById('progress-bar');
 
   window.addEventListener('scroll', () => {

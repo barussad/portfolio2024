@@ -119,6 +119,15 @@
 
 
 @media (max-width: 768px) {
+    body {
+        background-image: none;
+    }
+
+    main {
+        background-image: none;
+        background-color: white;
+    }
+
     #face {
         height: 335px;
         max-width: 100%;
