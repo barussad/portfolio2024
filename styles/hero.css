@@ -12,21 +12,6 @@ p {
   font-weight: 600;
 }
 
-.hero-cartoon-container {
-  display: inline-block;
-  position: relative;
-}
-
-.cartoon {
-  position: absolute;
-  top: -8rem;
-  left: 62rem;
-  width: 20%;
-  height: auto;
-  rotate: 30.65deg;
-  translate: translateX(-50%);
-}
-
 #progress-container {
   position: fixed;
   top: 0;
