@@ -32,6 +32,104 @@ h3 {
     color: #42679F;
 }
 
+#typeface {
+    display: none;
+}
+
 @media (max-width: 768px) {
+
+    .mobile-layout {
+        display: flex;
+    }
+
+    .one {
+        order: 1;
+    }
+
+    .two {
+        order: 2;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .about-me-container {
+        width: 90vw;
+    }
+
+    .about-me-text {
+        margin-bottom: 2rem;
+    }
+
+    .description {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .work-image {
+        max-width: 90vw;
+    }
+
+    .work-text {
+        padding: 0;
+    }
+
+
+    h3 {
+        font-family: 'cheap_potatoes_blackregular';
+        text-transform: uppercase;
+        color: #42679F;
+        font-size: 12px;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 2rem;
+        margin: auto;
+    }
+
+    .poster1 {
+        margin-bottom: 3rem;
+    }
+
+    .video {
+        margin-bottom: 3rem;
+    }
+
+    .web-video {
+        padding: 0;
+    }
+
+    .digital {
+        padding: 0 0 3rem 0;
+    }
+
+    .photofill {
+        margin-bottom: 2rem;
+    }
+
+    .illustration{
+        padding: 0;
+    }
+
+    .photo {
+        padding: 0 0 1rem 0;
+    }
+
+    .extra-padding {
+        padding-bottom: 2rem;
+    }
+
+    .typeface {
+        display: none;
+    }
+
+    #typeface {
+        display: flex;
+    }
+
     
 }

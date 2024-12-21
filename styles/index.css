@@ -136,7 +136,8 @@
     .buttons .btn {
         text-decoration: none;
         display: inline-block;
-        margin: 1rem;
+        margin: .8rem;
+        margin-bottom: 4rem;
         font-family: 'Manrope';
         background: #42679F;
         color: white;
