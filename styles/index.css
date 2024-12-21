@@ -78,6 +78,10 @@
     gap: 10px;
 }
 
+.mobile-description {
+    display: none;
+}
+
 .work-item {
     max-width: 349px;
     overflow: hidden;
@@ -98,32 +102,66 @@
 @media (max-width: 768px) {
     #face {
         height: 335px;
-        width: auto;
         max-width: 100%;
         position: absolute;
-        top: 120px;
+        top: 100px;
         left: -100px;
     }
 
-    .about-me-container {
-        width: 85vw;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
     .about-me {
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 0;
+        padding: 0;
         text-align: center;
     }
 
-    .about-me-text {
-        max-width: 349;
+    .about-me-container {
+        padding: 0;
+        margin: 0;
+        justify-content: center;
     }
+
+    .about-me-text {
+        max-width: 70vw;
+        margin: 20px 0 150px 0;
+        text-align: center;
+    }
+
+    .about-me-text p {
+        font-family: 'Manrope';
+        font-weight: 600;
+        line-height: 150%;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    .buttons .btn {
+        text-decoration: none;
+        display: inline-block;
+        margin: 1rem;
+        font-family: 'Manrope';
+        background: #42679F;
+        color: white;
+        padding: 10px 20px;
+        border: 2px solid #42679F;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .work-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .mobile-description {
+        display: flex;
+        font-family: 'cheap_potatoes_blackregular';
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #42679F;
+        margin-bottom: -10px;
+    }
+
+
+
 }

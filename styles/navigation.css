@@ -63,6 +63,10 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
+    .nav {
+        background-image: none;
+        background-color: white;
+    }
 
     .nav-links {
         display: none;

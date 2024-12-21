@@ -31,3 +31,7 @@ h3 {
     text-transform: uppercase;
     color: #42679F;
 }
+
+@media (max-width: 768px) {
+    
+}
