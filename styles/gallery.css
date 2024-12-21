@@ -29,3 +29,23 @@
 .grid-12 {
     grid-column: span 12;
 }
+
+
+@media (max-width: 768px) {
+
+    .grid {
+        max-width: 85vw;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        row-gap: 15px;
+        column-gap: 0;
+    }
+
+    .grid-4, .grid-5, .grid-6, .grid-7, .grid-12 {
+        grid-column: span 12;
+        justify-content: center;
+    }
+}

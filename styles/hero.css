@@ -7,11 +7,6 @@ body {
   background-repeat: repeat-y;
 }
 
-.longer {
-  background-image: url("../images/pattern2.svg");
-  background-repeat: repeat-y;
-}
-
 p {
   font-family: 'Manrope';
   font-weight: 600;
@@ -44,4 +39,14 @@ p {
 h1 {
   font-size: 2rem;
   margin-bottom: 0%;
+}
+
+@media (max-width: 768px) {
+  .body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: none;
+    background-color: white;
+  }
 }
