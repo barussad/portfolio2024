@@ -1,4 +1,5 @@
 
+
 .about-me-container {
     width: 85vw;
     margin: 0 auto;
@@ -95,10 +96,34 @@
 
 
 @media (max-width: 768px) {
+    #face {
+        height: 335px;
+        width: auto;
+        max-width: 100%;
+        position: absolute;
+        top: 120px;
+        left: -100px;
+    }
+
     .about-me-container {
         width: 85vw;
         margin: 0 auto;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .about-me {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .about-me-text {
+        max-width: 349;
     }
 }

@@ -12,6 +12,12 @@ p {
   font-weight: 600;
 }
 
+.cartoon {
+  display: none;
+  max-width: 338px;
+  rotate: 30.65deg;
+}
+
 .hero-image {
   height: 100vh;
   background-position: center;
@@ -49,4 +55,33 @@ h1 {
     background-image: none;
     background-color: white;
   }
+
+  .hero-image {
+    height: 80vh;
+    background-image: none;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-text {
+    font-family: 'cheap_potatoes_blackregular';
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+
+  .big {
+    font-size: 3rem;
+    line-height: 159%;
+    margin-top: 0%;
+  }
+
+  h1 {
+    font-size: 1rem;
+    margin-bottom: 0%;
+  }
+
 }
