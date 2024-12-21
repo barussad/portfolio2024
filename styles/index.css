@@ -92,6 +92,9 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 2;
+    opacity: 0;
+    rotate: -5deg;
     object-fit: cover;
     transition: opacity 0.3s ease;
 
@@ -99,12 +102,6 @@
 
 .main-image {
     z-index: 1;
-}
-
-.scribble {
-    z-index: 2;
-    opacity: 0;
-    rotate: -5deg;
 }
 
 .work-item:hover .scribble {
@@ -179,6 +176,10 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 30px;
+    }
+
+    .scribble {
+        display: none;
     }
 
     .mobile-description {
