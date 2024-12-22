@@ -65,7 +65,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     header {
         background-color: white;
-        z-index: 2;
+        z-index: 3;
     }
     nav {
         width: 80vw;
@@ -80,7 +80,7 @@ nav ul li a:hover {
     }
 
     .nav-links {
-        z-index: 2;
+        z-index: 3;
         display: none;
         flex-direction: column;
         gap: 40px;
