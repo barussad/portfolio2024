@@ -29,7 +29,7 @@ a {
     font-size: .75rem;
 }
 
-.active {
+.activated {
     font-weight: 800;
     text-decoration: wavy underline;
     text-underline-position: under;
@@ -83,15 +83,16 @@ nav ul li a:hover {
         z-index: 2;
         display: none;
         flex-direction: column;
-        gap: 20px;
+        gap: 40px;
         background-color: white;
-        position: relative;
-        top: 30px;
+        position: absolute;
+        top: 80px;
         left: 0;
-        width: 100vw;
-        height: calc(100vh - 30px); /* druhy cislo je stejny jako top*/
-        justify-content: center;
+        width: 100%;
+        height: calc(100vh - 80px); /* druhy cislo je stejny jako top*/
+        justify-content: flex-start;
         align-items: center;
+        padding: 50px 0 0 0;
     }
 
     .nav-links.active {
