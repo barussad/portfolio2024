@@ -48,7 +48,7 @@ p {
 .items-text {
     flex: 1;
     max-width: 35vw;
-    margin-right: 5rem;
+    margin-right: 2rem;
 }
 
 .items-text p {
@@ -166,8 +166,8 @@ p {
     }
 
     .items-text {
-        max-width: 70vw;
-        margin: 20px 0 150px 0;
+        max-width: 80vw;
+        margin: 20px 0 100px 0;
         text-align: center;
     }
 
