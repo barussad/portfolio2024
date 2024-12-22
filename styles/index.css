@@ -1,6 +1,6 @@
 
 
-.about-me-container {
+.items-container {
     width: 85vw;
     margin: 0 auto;
     display: flex;
@@ -9,7 +9,7 @@
     flex-wrap: wrap;
 }
 
-.about-me {
+.items {
     background-color: white;
     display: flex;
     align-items: center;
@@ -23,13 +23,13 @@
     margin-right: 2rem;
 }
 
-.about-me-text {
+.items-text {
     flex: 1;
     max-width: 35vw;
     margin-right: 5rem;
 }
 
-.about-me-text p {
+.items-text p {
     font-family: 'Manrope';
     font-weight: 600;
     line-height: 150%;
@@ -132,24 +132,24 @@
         left: -100px;
     }
 
-    .about-me {
+    .items {
         padding: 0;
         text-align: center;
     }
 
-    .about-me-container {
+    .items-container {
         padding: 0;
         margin: 0;
         justify-content: center;
     }
 
-    .about-me-text {
+    .items-text {
         max-width: 70vw;
         margin: 20px 0 150px 0;
         text-align: center;
     }
 
-    .about-me-text p {
+    .items-text p {
         font-family: 'Manrope';
         font-weight: 600;
         line-height: 150%;
@@ -190,7 +190,5 @@
         color: #42679F;
         margin-bottom: -10px;
     }
-
-
 
 }

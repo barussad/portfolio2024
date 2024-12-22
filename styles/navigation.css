@@ -63,9 +63,25 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    header {
+        background-color: white;
+        z-index: 2;
+    }
+    nav {
+        width: 80vw;
+        padding: 5vh auto 0 auto;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: 'Manrope';
+        font-weight: 600;
+        align-items: center;
+    }
 
+    .nav-links {
+        z-index: 2;
+        display: none;
         flex-direction: column;
         gap: 20px;
         background-color: white;
@@ -93,6 +109,7 @@ nav ul li a:hover {
     .menu-icon.active span:nth-child(2) {
         opacity: 0; /* zmizi prostredni carka */
     }
+
 /* ted udelame ze zbyvajicich dvou krizek */
 
     .menu-icon.active span:nth-child(1) {
