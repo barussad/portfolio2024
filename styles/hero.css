@@ -55,6 +55,7 @@
   }
 
   .hero-text {
+    z-index: 2;
     margin-top: 300px;
     font-family: 'cheap_potatoes_blackregular';
     text-transform: uppercase;
