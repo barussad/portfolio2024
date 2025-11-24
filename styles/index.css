@@ -213,4 +213,14 @@ p {
         margin-bottom: -10px;
     }
 
+    hr {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        border-radius: 50%;
+        opacity: 50%;
+        border-color: #ff0000b0;
+        -webkit-filter: blur(1px);
+        filter: blur(1px);
+    }
+
 }
