@@ -116,6 +116,67 @@ h3 {
   background: rgba(66,103,159,0.7);
 }
 
+/* Single poster carousel */
+.carousel-single {
+  position: relative;
+  max-width: 600px;          /* klidně 100% */
+  margin: 3rem auto;
+}
+
+.carousel-single-window {
+  overflow: hidden;
+}
+
+.carousel-single-track {
+  display: flex;
+  gap: 1.5rem;               /* mezery mezi postery – nebudou vidět, protože vidíš jen 1 */
+  transition: transform 0.4s ease;
+}
+
+.carousel-single-track img {
+  flex: 0 0 100%;            /* vždy 1 obrázek přes celé okno */
+  width: 400px;             /* tvoje oblíbená výška :) */
+  object-fit: cover;         /* nebo contain, jestli nechceš ořez */
+  border-radius: 12px;
+}
+
+/* šipky */
+.carousel-single-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(66,103,159,0.4);
+  color: #fff;
+  width: 32px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  z-index: 2;
+}
+
+.carousel-single-btn.prev {
+  left: -40px;
+}
+
+.carousel-single-btn.next {
+  right: -40px;
+}
+
+.carousel-single-btn:hover {
+  background: rgba(66,103,159,0.7);
+}
+
+@media (max-width: 768px) {
+  .carousel-3-track img,
+  .carousel-single-track img {
+    height: 260px;
+  }
+}
+
 @media (max-width: 768px) {
 
     .mobile-layout {
