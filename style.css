@@ -8,3 +8,15 @@
 @import url("styles/footer.css");
 @import url("styles/work.css");
 @import url("styles/gallery.css");
+
+    .fancy-hr {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 8px;
+        margin-bottom: 5px;
+        border-radius: 50%;
+        opacity: 50%;
+        border-color: #000000b0;
+        -webkit-filter: blur(1px);
+        filter: blur(1px);
+    }
