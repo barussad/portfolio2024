@@ -27,58 +27,17 @@ const progressBar = document.getElementById('progress-bar');
 })
 
 /* carousel */
-const track = document.querySelector('.carousel-3-track');
-  const slides = track ? Array.from(track.querySelectorAll('img')) : [];
-  const prevBtn = document.querySelector('.carousel-3-btn.prev');
-  const nextBtn = document.querySelector('.carousel-3-btn.next');
+function initCarouselGroup(containerSelector, trackSelector, prevSelector, nextSelector, visible) {
+  const containers = document.querySelectorAll(containerSelector);
 
-  if (track && slides.length && prevBtn && nextBtn) {
-    const visible = 3;                 // kolik obrázků je vidět najednou
-    let index = 0;                     // aktuální "levý" obrázek
+  containers.forEach((container) => {
+    const track = container.querySelector(trackSelector);
+    if (!track) return;
 
-    function maxIndex() {
-      // poslední pozice, kde ještě uvidíš 3 plakáty vedle sebe
-      return Math.max(0, slides.length - visible);
-    }
-
-    function goTo(newIndex) {
-      // obtočení (loop) mezi prvním a posledním "oknem"
-      const last = maxIndex();
-
-      if (newIndex < 0) {
-        index = last;                  // zleva skoč na konec
-      } else if (newIndex > last) {
-        index = 0;                     // zprava skoč na začátek
-      } else {
-        index = newIndex;
-      }
-
-      // posuneme track tak, aby obrázek s daným indexem byl úplně vlevo
-      const offset = slides[index].offsetLeft;
-      track.style.transform = `translateX(-${offset}px)`;
-    }
-
-    nextBtn.addEventListener('click', () => {
-      goTo(index + 1);                 // další slide
-    });
-
-    prevBtn.addEventListener('click', () => {
-      goTo(index - 1);                 // předchozí slide
-    });
-
-    window.addEventListener('resize', () => goTo(index));
-
-    // inicializace
-    goTo(0);
-  }
-
-  function initCarousel(trackSelector, prevSelector, nextSelector, visible) {
-    const track = document.querySelector(trackSelector);
-    const slides = track ? Array.from(track.querySelectorAll('img')) : [];
-    const prevBtn = document.querySelector(prevSelector);
-    const nextBtn = document.querySelector(nextSelector);
-
-    if (!track || !slides.length || !prevBtn || !nextBtn) return;
+    const slides = Array.from(track.children); // každé dítě = jeden slide
+    const prevBtn = container.querySelector(prevSelector);
+    const nextBtn = container.querySelector(nextSelector);
+    if (!slides.length || !prevBtn || !nextBtn) return;
 
     let index = 0;
 
@@ -97,25 +56,30 @@ const track = document.querySelector('.carousel-3-track');
         index = newIndex;
       }
 
-      const offset = slides[index].offsetLeft;
+      // posuneme track tak, aby "slide" s daným indexem byl vlevo
+      const offset = slides[index].offsetLeft - slides[0].offsetLeft;
       track.style.transform = `translateX(-${offset}px)`;
     }
-
-    nextBtn.addEventListener('click', () => {
-      goTo(index + 1);
-    });
 
     prevBtn.addEventListener('click', () => {
       goTo(index - 1);
     });
 
+    nextBtn.addEventListener('click', () => {
+      goTo(index + 1);
+    });
+
     window.addEventListener('resize', () => goTo(index));
 
     goTo(0);
-  }
+  });
+}
 
-  // původní 3-poster carousel
-  initCarousel('.carousel-3-track', '.carousel-3-btn.prev', '.carousel-3-btn.next', 3);
+// 3-img carousel (pokud ho používáš)
+initCarouselGroup('.carousel-3', '.carousel-3-track', '.carousel-3-btn.prev', '.carousel-3-btn.next', 3);
 
-  // nový single-poster carousel
-  initCarousel('.carousel-single-track', '.carousel-single-btn.prev', '.carousel-single-btn.next', 1);
+// velký single carousel
+initCarouselGroup('.carousel-single', '.carousel-single-track', '.carousel-single-btn.prev', '.carousel-single-btn.next', 1);
+
+// všechny small carousely (můžeš mít 1, 2, 5… kolik chceš)
+initCarouselGroup('.carousel-single-small', '.carousel-single-small-track', '.carousel-single-small-btn.prev', '.carousel-single-small-btn.next', 1);

@@ -170,6 +170,65 @@ h3 {
   background: rgba(66,103,159,0.7);
 }
 
+/* Single carousel #3 – menší plakáty */
+.carousel-single-small {
+  position: relative;
+  max-width: 500px;          /* menší než ten velký single */
+  margin: 3rem auto;
+}
+
+.carousel-single-small-window {
+  overflow: hidden;
+}
+
+.carousel-single-small-track {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.4s ease;
+  align-items: center;
+}
+
+.carousel-single-small-track img {
+  flex: 0 0 100%;                   /* pořád jeden slide přes celé okno */
+  width: auto;                      /* přirozená šířka podle poměru stran */
+  max-width: 100%;                  /* ale ne víc než okno */
+  height: auto;                     /* přirozená výška */
+  max-height: 500px;                /* limit, ať nejsou mega vysoké */
+  margin: 0 auto;                   /* centrování obrázku */
+  object-fit: contain;              /* nic se neořezává */
+  border-radius: 12px;
+}
+
+/* šipky */
+.carousel-single-small-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(66,103,159,0.4);
+  color: #fff;
+  width: 32px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  z-index: 2;
+}
+
+.carousel-single-small-btn.prev {
+  left: -40px;
+}
+
+.carousel-single-small-btn.next {
+  right: -40px;
+}
+
+.carousel-single-small-btn:hover {
+  background: rgba(66,103,159,0.7);
+}
+
 @media (max-width: 768px) {
   .carousel-3-track img,
   .carousel-single-track img {
