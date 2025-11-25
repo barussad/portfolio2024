@@ -6,11 +6,27 @@
   transition: width 0.1s ease-out;
 }
 
+.hero-header {
+  position: relative;
+  min-height: 100vh;   /* hero přes celou výšku okna */
+  overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;            /* top:0; right:0; bottom:0; left:0; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* vyplní celý prostor jako background-size: cover */
+    z-index: -1;
+    pointer-events: none; /* ať nepřekáží klikání na nav */
+    filter: brightness(0.5);
+}
+
+
 .hero-image {
-  background-image: url("/images/hero.gif");
   min-height: calc(100vh - 300px); /* Minimální výška: výška okna minus navbar */
-  background-position: center;
-  background-repeat: no-repeat;
+  z-index: 1;
   background-size: cover;
   position: relative;
   display: flex;

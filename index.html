@@ -15,15 +15,19 @@
         <div id="progress-bar"></div>
     </div>
 
-    <header>
+    <header class="hero-header">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="images/hero.mp4" type="video/mp4">
+        </video>
+
         <nav>
             <div class="logo">
-                <a href="index.html">Barussad</a>
+                <a class="white" href="index.html">Barussad</a>
             </div>
             <ul class="nav-links" id="nav-links">
-                <li><a class="activated" href="index.html">Work</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a class="activated white" href="index.html">Work</a></li>
+                <li><a class="white" href="gallery.html">Gallery</a></li>
+                <li><a class="white" href="contact.html">Contact</a></li>
             </ul>
             <div class="menu-icon" id="menu-icon">
                 <span></span>
@@ -31,14 +35,15 @@
                 <span></span>
             </div>
         </nav>
-    </header>
-    
-    <main>
+
         <div class="hero-image">
             <h1 class="hero-text">Hi, my name is</h1>
             <h2 class="hero-text big">Barbora Sadecka</h2>
         </div>
 
+    </header>
+    
+    <main>
         <section class="items">
             <div class="items-container">
                 <img id="face" src="images/face.svg" alt="face">

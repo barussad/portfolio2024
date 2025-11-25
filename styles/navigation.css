@@ -9,6 +9,17 @@ nav {
     font-family: 'Manrope';
     font-weight: 600;
     align-items: center;
+    z-index: 2;
+}
+
+nav a.white {
+    color: rgb(255, 255, 255);
+    background: transparent;
+}
+
+nav a.white:hover {
+    color: rgb(255, 237, 137);
+    background: transparent;
 }
 
 nav ul {
@@ -20,7 +31,7 @@ nav ul {
 }
 
 a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .logo {
@@ -41,7 +52,7 @@ a {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 nav ul li a:hover {
