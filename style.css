@@ -9,14 +9,21 @@
 @import url("styles/work.css");
 @import url("styles/gallery.css");
 
-    .fancy-hr {
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-top: 8px;
-        margin-bottom: 5px;
-        border-radius: 50%;
-        opacity: 50%;
-        border-color: #000000b0;
-        -webkit-filter: blur(1px);
-        filter: blur(1px);
-    }
+.whitebg {
+    background-color: white;
+    padding: 8px 0;
+}
+
+.fancy-hr {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    opacity: 50%;
+    border-color: #000000b0;
+    background-image: none;
+    background-color: rgb(255, 255, 255);
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+}

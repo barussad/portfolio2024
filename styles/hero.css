@@ -20,7 +20,7 @@
     object-fit: cover;   /* vyplní celý prostor jako background-size: cover */
     z-index: -1;
     pointer-events: none; /* ať nepřekáží klikání na nav */
-    filter: brightness(0.5);
+    filter: brightness(0.5) grayscale(0);
 }
 
 
