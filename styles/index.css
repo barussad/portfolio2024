@@ -148,6 +148,31 @@ p {
     background-color: white;
 }
 
+.work-overlay {
+    position: absolute;
+    inset: 0;                           /* přesně přes celý box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);    /* tmavý závoj */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2;                         /* nad obrázky */
+}
+
+.work-overlay-text {
+    color: #fff;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.work-item:hover .work-overlay {
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
     body {
         background-image: none;
