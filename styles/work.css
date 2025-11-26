@@ -229,6 +229,26 @@ h3 {
   background: rgba(66,103,159,0.7);
 }
 
+.items-contanier .cara {
+    position: relative;
+    justify-content: center;
+    flex-wrap: nowrap;      /* všechno v jednom řádku */
+    gap: 4rem;              /* mezera mezi obrázky a čárou uprostřed */
+}
+
+/* čára uprostřed containeru */
+.items-contanier .cara::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;              /* střed mezi obrázky */
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 80px;           /* délka čáry */
+    background-color: #000000; /* na test klidně dej red */
+    border-radius: 999px;
+}
+
 @media (max-width: 768px) {
   .carousel-3-track img,
   .carousel-single-track img {

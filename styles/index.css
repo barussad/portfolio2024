@@ -31,6 +31,19 @@ p {
     flex-wrap: wrap;
 }
 
+.vl {
+    border-left: 2px solid #000000; /* defines the width, style and color of the line (change the hex code [#303030] to match your site). */
+    height: 200px; /* defines the length of the line.*/
+    position: relative;
+    left: 50%; /* move the line to the middle (50% of the page width)*/
+    margin-left: -1px; /*half the width of border witdth to ensure the line is precicely centered on the page.*/
+    top: 0;
+    border-radius: 50%;
+    opacity: 50%;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+}
+
 .items {
     background-color: white;
     display: flex;
