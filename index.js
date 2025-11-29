@@ -75,11 +75,54 @@ function initCarouselGroup(containerSelector, trackSelector, prevSelector, nextS
   });
 }
 
-// 3-img carousel (pokud ho používáš)
+// 3-img carousel
 initCarouselGroup('.carousel-3', '.carousel-3-track', '.carousel-3-btn.prev', '.carousel-3-btn.next', 3);
 
 // velký single carousel
 initCarouselGroup('.carousel-single', '.carousel-single-track', '.carousel-single-btn.prev', '.carousel-single-btn.next', 1);
 
-// všechny small carousely (můžeš mít 1, 2, 5… kolik chceš)
+// všechny small carousely
 initCarouselGroup('.carousel-single-small', '.carousel-single-small-track', '.carousel-single-small-btn.prev', '.carousel-single-small-btn.next', 1);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const flipbook = document.getElementById('flipbook');
+  if (!flipbook) return;
+
+  const spreads = Array.from(flipbook.querySelectorAll('.book-spread'));
+  const prevBtn = document.querySelector('.book-prev');
+  const nextBtn = document.querySelector('.book-next');
+
+  if (!spreads.length || !prevBtn || !nextBtn) return;
+
+  let current = 0;
+
+  // inicializace – nastav první spread jako aktivní
+  function setActiveSpread(index) {
+    spreads.forEach((spread, i) => {
+      spread.classList.toggle('active', i === index);
+      // vyšší z-index pro aktuální spread, aby byl vždy nad ostatními
+      spread.style.zIndex = spreads.length - i;
+    });
+  }
+
+  function goNext() {
+    if (current >= spreads.length - 1) return;
+    current++;
+    setActiveSpread(current);
+  }
+
+  function goPrev() {
+    if (current <= 0) return;
+    current--;
+    setActiveSpread(current);
+  }
+
+  prevBtn.addEventListener('click', goPrev);
+  nextBtn.addEventListener('click', goNext);
+
+  // volitelné: klik na knížku = další spread
+  flipbook.addEventListener('click', goNext);
+
+  setActiveSpread(current);
+});

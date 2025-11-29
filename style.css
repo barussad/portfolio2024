@@ -8,6 +8,7 @@
 @import url("styles/footer.css");
 @import url("styles/work.css");
 @import url("styles/gallery.css");
+@import url("styles/book.css");
 
 .whitebg {
     background-color: white;

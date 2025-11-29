@@ -1,0 +1,87 @@
+.flipbook-section {
+  margin: 4rem auto;
+  text-align: center;
+}
+
+/* “knížka” jako celek */
+.flipbook {
+  position: relative;
+  width: min(70vw, 900px);    /* šířka celé knížky */
+  aspect-ratio: 3 / 2;         /* širší tvar (dvě stránky vedle sebe) */
+  margin: 2rem auto;
+  perspective: 1600px;
+}
+
+/* jedna dvojstránka (2 stránky vedle sebe) */
+.book-spread {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  gap: 0;                       /* žádná mezera mezi stranami */
+  opacity: 0;
+  transform: translateX(30px);  /* “mimo záběr” vpravo */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+
+/* aktuálně viditelná dvojstránka */
+.book-spread.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* jednotlivá stránka v rámci dvojstránky */
+.book-page {
+  flex: 1;
+  background: #111;
+  overflow: hidden;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* levá / pravá strana – drobný “fold” efekt */
+.book-page:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.book-page:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* obsah stránky – obrázek na celou plochu */
+.book-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* nebo contain, pokud nechceš žádný ořez */
+  display: block;
+}
+
+/* tlačítka pod knížkou */
+.book-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.book-btn {
+   text-decoration: none;
+    display: inline-block;
+    margin-right: 2rem;
+    font-family: 'Manrope';
+    background: #42679F;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #42679F;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-1px);
+}

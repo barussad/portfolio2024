@@ -229,25 +229,64 @@ h3 {
   background: rgba(66,103,159,0.7);
 }
 
-.items-contanier .cara {
-    position: relative;
-    justify-content: center;
-    flex-wrap: nowrap;      /* všechno v jednom řádku */
-    gap: 4rem;              /* mezera mezi obrázky a čárou uprostřed */
+/* Mřížka náhledů */
+.hover-gallery-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-/* čára uprostřed containeru */
-.items-contanier .cara::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;              /* střed mezi obrázky */
-    transform: translate(-50%, -50%);
-    width: 2px;
-    height: 80px;           /* délka čáry */
-    background-color: #000000; /* na test klidně dej red */
-    border-radius: 999px;
+.hover-gallery-item {
+  position: relative;
 }
+
+/* malý náhled v gridu */
+.hover-thumb {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* velká verze – defaultně schovaná, ale připravená uprostřed obrazovky */
+.hover-large {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  max-width: min(70vw, 900px);
+  max-height: 80vh;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  z-index: 50;
+}
+
+/* jemný tmavý overlay přes celou stránku při hoveru */
+.hover-gallery-item::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 40;
+}
+
+/* HOVER: ukáže velký obrázek + overlay */
+.hover-gallery-item:hover .hover-large {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.hover-gallery-item:hover::before {
+  opacity: 1;
+}
+
 
 @media (max-width: 768px) {
   .carousel-3-track img,
