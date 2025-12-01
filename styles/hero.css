@@ -66,6 +66,13 @@
     background-color: white;
   }
 
+  .hero-video {
+    min-height: 50vh;
+    display: none;
+    background-image: none;
+    background-color: white;
+  }
+
   .cartoon {
     display: none;
   }
