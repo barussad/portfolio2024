@@ -1,17 +1,21 @@
 /* navbar */
 const menuIcon = document.getElementById("menu-icon") /* nebo misto const let?*/
 const navLinks = document.getElementById("nav-links")
+const header = document.querySelector("header")
 
 const body = document.querySelector("body")
 
 menuIcon.addEventListener("click", () => {
     menuIcon.classList.toggle("active") /* toggle - meni stav */
     navLinks.classList.toggle("active")
+    header.classList.toggle("active")
 /* kdyz je otevreny burger menu, nejde scrollovat na kontent */
     if (menuIcon.classList.contains("active")) {
-        body.style.overflowY = "hidden";
+        body.style.overflowY = "hidden",
+        header.style.zIndex = "5";
     } else {
-        body.style.overflowY = "auto";
+        body.style.overflowY = "auto",
+        header.style.zIndex = "3";
     }
 })
 

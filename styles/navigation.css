@@ -79,6 +79,7 @@ nav ul li a:hover {
         z-index: 3;
     }
     nav {
+        z-index: 3;
         width: 80vw;
         padding: 5vh auto 0 auto;
         background-color: white;
